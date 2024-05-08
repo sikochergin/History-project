@@ -238,6 +238,8 @@ main {
         height: 100%;
         display: flex;
         flex-direction: column;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
     }
 
     main {
