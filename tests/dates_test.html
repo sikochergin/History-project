@@ -51,7 +51,11 @@
     <footer>
         <p>&copy; Тест по истории</p>
     </footer>
-
     <script src="/static/scripts/dates_test.js"></script>
+    <script>
+        document.ondragstart = noselect;
+        document.onselectstart = noselect;
+        function noselect() { return false; }
+    </script>
 </body>
 </html>
