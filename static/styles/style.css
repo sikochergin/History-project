@@ -100,16 +100,18 @@ main {
 }
 
 .text {
-    background-color: red;
     margin-left: auto;
     margin-right: auto;
 
-    width: 70%;
-    height: 30%;
+    width: 100%;
+    height: auto;
+
+    font-size: 35px;
 
     margin-top: 40px;
-    padding: 20px;
+    margin-bottom: 50px;
 
+    text-align: center;
 }
 
 #answer {
@@ -124,22 +126,18 @@ main {
 
 /*  */
 .test-container {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #4CAF50;
 
     display: flex;
     flex-flow: column;
    align-items: center;
 }
-.test-container h2 {
-}
 
 #question-container {
-    padding: 30px;
     margin-bottom: 30px;
-    
+    width: 80%;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -152,9 +150,9 @@ main {
 
 .answer-options {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    width: 80%;
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 20px;
+    width: 100%;
 }
 
 .answer-option {
@@ -163,11 +161,12 @@ main {
     padding: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 150px; 
+    width: 80%; 
+    text-align: center;
 }
 
 .answer-option:hover {
-    background-color: #e8e8e8;
+    background-color: #cccccc;
 }
 
 .answer-option.selected {

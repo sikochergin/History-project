@@ -1,5 +1,4 @@
 // Загрузка вопросов и ответов из JSON-файла
-console.log("hes");
 fetch("/static/tests_jsons/dates_test.json")
     .then(response => response.json())
     .then(data => {
