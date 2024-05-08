@@ -78,7 +78,7 @@ fetch("/static/tests_jsons/dates_test.json")
 
             const resultsElement = document.createElement('div');
             resultsElement.classList.add('results');
-            resultsElement.textContent = `Правильных ответов ${correctAnswers} из ${questions.length}`;
+            resultsElement.textContent = `Ваш результат: ${correctAnswers} / ${questions.length}`;
             questionContainer.appendChild(resultsElement);
         }
 

@@ -133,7 +133,7 @@ main {
 
     display: flex;
     flex-flow: column;
-   align-items: center;
+    align-items: center;
 }
 
 #question-container {
@@ -162,7 +162,7 @@ main {
     padding: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 80%; 
+    width: 80%;
     text-align: center;
 }
 
@@ -219,6 +219,7 @@ main {
     justify-content: flex-start;
     align-items: center;
 }
+
 .progressBarInner {
     height: 90%;
     width: 2%;
@@ -226,4 +227,109 @@ main {
     background-color: #00FF43;
     border-top-left-radius: calc(var(--height) * 0.45);
     border-bottom-left-radius: calc(var(--height) * 0.45);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+
+    header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .headerLogo {
+        width: 100%;
+        font-size: 30px;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .ad {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .testBlock {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .text {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    #answer {
+        width: 80%;
+        margin-top: 40px;
+    }
+
+    .question {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .answer-options {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+
+    .answer-option {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .numberQuestionContainer {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .qnumber {
+        height: 25px;
+        width: 25px;
+        font-size: medium;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .progressBarOuter {
+        width: 60%;
+    }
 }
