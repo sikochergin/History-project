@@ -1,4 +1,5 @@
 // Загрузка вопросов и ответов из JSON-файла
+const coutOfQuestions = 15;
 fetch("/static/tests_jsons/dates_test.json")
     .then(response => response.json())
     .then(data => {
@@ -11,6 +12,28 @@ fetch("/static/tests_jsons/dates_test.json")
             const currentQuestion = questions[currentQuestionIndex];
             const questionContainer = document.getElementById('question-container');
             questionContainer.innerHTML = '';
+
+            // Контейнер с номером вопроса и полосой прогресса
+            const numberQuestionContainer = document.createElement('div');
+            numberQuestionContainer.classList.add('numberQuestionContainer');
+            // Номер вопроса
+            const qnumber = document.createElement('div');
+            qnumber.textContent = currentQuestionIndex + 1;
+            qnumber.classList.add('qnumber');
+            numberQuestionContainer.appendChild(qnumber);
+
+            // Полоса прогресса
+            const progressBar = document.createElement('div');
+            progressBar.classList.add('progressBarOuter')
+            const progress = document.createElement('div');
+            progress.classList.add('progressBarInner');
+            progress.style.width = (100 / coutOfQuestions * currentQuestionIndex) + '%';
+            progressBar.appendChild(progress);
+
+            numberQuestionContainer.appendChild(progressBar);
+
+            questionContainer.appendChild(numberQuestionContainer);
+
 
             // Создание элементов для отображения вопроса и ответов
             const questionElement = document.createElement('div');
