@@ -76,6 +76,33 @@ main {
 
     font-family: Arial, Helvetica, sans-serif;
 }
+main img {
+    z-index: -1;
+}
+.cannon {
+    width: 20vw;
+    position: absolute;
+    bottom: 65vh;
+    left: 100px;
+}
+.kutuzov {
+    width: 40vw;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+.ship {
+    width: 20vw;
+    position: absolute;
+    right: 10px;
+    bottom: 50vh;
+}
+.petr {
+    height: 50vh;
+    position: absolute;
+    bottom: 10px;
+    left: -40px;
+}
 
 .ad {
     width: 20%;
