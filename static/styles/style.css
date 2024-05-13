@@ -77,7 +77,7 @@ main {
     font-family: Arial, Helvetica, sans-serif;
 }
 main img {
-    z-index: -1;
+    z-index: 1;
 }
 .cannon {
     width: 20vw;
@@ -108,7 +108,7 @@ main img {
     width: 20%;
     height: 100%;
 
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 .left {
@@ -129,6 +129,8 @@ main img {
     padding-top: 30px;
 
     display: flex;
+
+    z-index: 2;
 }
 
 .text {
