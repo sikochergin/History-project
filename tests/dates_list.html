@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/static/styles/style.css">
     <link rel="stylesheet" href="/static/styles/dates_list_styles.css">
     <script src="/static/scripts/dates_list.js"></script>
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb = window.yaContextCb || []</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 
 <body>
@@ -24,7 +27,17 @@
         </nav>
     </header>
 
-    <main style="height: auto;">
+    <main>
+        <!-- Yandex.RTB R-A-8609623-1 -->
+        <div id="yandex_rtb_R-A-8609623-1"></div>
+        <script>
+            window.yaContextCb.push(() => {
+                Ya.Context.AdvManager.render({
+                    "blockId": "R-A-8609623-1",
+                    "renderTo": "yandex_rtb_R-A-8609623-1"
+                })
+            })
+        </script>
         <div id="dates_list">
         </div>
     </main>
