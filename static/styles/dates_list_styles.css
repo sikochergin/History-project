@@ -5,7 +5,7 @@
     padding-left: 50px;
     padding-top: 50px;
 
-    width: 60%;
+    width: 50%;
     height: auto;
     background-color: #eed8b0;
 }
@@ -42,10 +42,14 @@
 main {
     height: auto;
     display: flex;
+    justify-content: space-between;
 }
 
 #yandex_rtb_R-A-8609623-1 {
-    background-color: #f3f1ed;
+    width: 20%;
+    height: auto;
+}
+#yandex_rtb_R-A-8609623-2 {
     width: 20%;
     height: auto;
 }
