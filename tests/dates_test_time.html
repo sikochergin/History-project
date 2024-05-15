@@ -8,6 +8,7 @@
     <title>Проект по истории</title>
     <link rel="stylesheet" href="/static/styles/style.css">
     <link rel="stylesheet" href="/static/styles/dates_test_styles.css">
+    <link rel="stylesheet" href="/static/styles/dates_test_time_styles.css">
 </head>
 
 <body>
@@ -24,37 +25,20 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <img src="/static/images/Cannon.png" alt="Cannon" class="cannon">
         <img src="/static/images/Kutuzov.png" alt="Kutuzov" class="kutuzov">
         <img src="/static/images/Petr_1.png" alt="Petr" class="petr">
         <img src="/static/images/Ship.png" alt="Ship" class="ship">
-        <div class="ad left">
-        </div>
 
         <div class="testBlock">
-            <div class="test-container">
-                <h2>Тест по датам</h2>
-                <!-- Блок с выбором количества вопросов -->
-                <div id="question-selection-container">
-                    <h2>Выберите количество вопросов</h2>
-                    <input type="range" id="question-count-slider" min="1" max="10" value="1" step="1">
-                    <span id="question-count-display">1</span>
-                    <button id="start-button">Далее</button>
-                </div>
-                <!-- Здесь будут отображаться вопросы и варианты ответов -->
-                <div id="question-container">
-                </div>
-                <!-- Пройти заново -->
-                <div id="results-container" style="display: none;">
-                    <div class="results"></div>
-                    <button id="restart-button">Пройти заново</button>
-                </div>
+            <div id="description-container">
+                <p>Эта тестовая работа состоит из 20 вопросов. У вас есть 20 минут на её выполнение.</p>
+                <button id="start-button">Начать тест</button>
             </div>
-        </div>
-
-        <div class="ad right">
-
+            <div class="timer" id="timer-container">20:00</div>
+            <div id="question-container" class="question-container"></div>
+            <div id="results-container" style="display: none;"></div>
         </div>
     </main>
 
