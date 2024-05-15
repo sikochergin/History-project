@@ -69,6 +69,7 @@ nav ul li a:hover {
 .active {
     font-weight: bold;
     font-size: x-large;
+    cursor: default;
 }
 
 main {
