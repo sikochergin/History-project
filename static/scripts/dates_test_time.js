@@ -50,6 +50,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const questionContainer = document.getElementById('question-container');
         questionContainer.innerHTML = '';
 
+        // 
+        // Контейнер с номером вопроса и полосой прогресса
+        const numberQuestionContainer = document.createElement('div');
+        numberQuestionContainer.classList.add('numberQuestionContainer');
+        // Номер вопроса
+        const qnumber = document.createElement('div');
+        qnumber.textContent = currentQuestionIndex + 1;
+        qnumber.classList.add('qnumber');
+        numberQuestionContainer.appendChild(qnumber);
+
+        // Полоса прогресса
+        const progressBar = document.createElement('div');
+        progressBar.classList.add('progressBarOuter')
+        const progress = document.createElement('div');
+        progress.classList.add('progressBarInner');
+        progress.style.width = (100 / 20 * currentQuestionIndex) + '%';
+        progressBar.appendChild(progress);
+
+        numberQuestionContainer.appendChild(progressBar);
+        questionContainer.appendChild(numberQuestionContainer);
+        // 
+
+
         const questionElement = document.createElement('div');
         questionElement.classList.add('text');
         questionElement.textContent = currentQuestion.question;

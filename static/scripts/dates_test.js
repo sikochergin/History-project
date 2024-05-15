@@ -73,7 +73,18 @@ fetch("/static/tests_jsons/dates_test.json")
             progressBar.classList.add('progressBarOuter')
             const progress = document.createElement('div');
             progress.classList.add('progressBarInner');
-            progress.style.width = (100 / countOfQuestions * currentQuestionIndex) + '%';
+            const width = 100 / countOfQuestions * currentQuestionIndex;
+            if (width <= 4) {
+                progress.style.height = width * 5 + 70 + '%';
+            }
+            else if (width >= 96) {
+                progress.style.borderTopLeftRadius = 'calc(var(--height) * 0.45)';
+                progress.style.borderBottomLeftRadius = 'calc(var(--height) * 0.45)';
+            } else 
+            {
+                progress.style.height = '90%';
+            }
+            progress.style.width = width + '%';
             progressBar.appendChild(progress);
 
             numberQuestionContainer.appendChild(progressBar);
