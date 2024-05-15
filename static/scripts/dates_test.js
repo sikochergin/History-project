@@ -25,7 +25,7 @@ fetch("/static/tests_jsons/dates_test.json")
 
         startButton.addEventListener('click', () => {
             document.getElementById('question-selection-container').style.display = 'none';
-            document.getElementById('question-container').style.display = "flex"; 
+            document.getElementById('question-container').style.display = "flex";
             displayCurrentQuestion();
         });
         // Пройти заново
@@ -95,7 +95,7 @@ fetch("/static/tests_jsons/dates_test.json")
                 const answerElement = document.createElement('div');
                 answerElement.classList.add('answer-option');
                 answerElement.textContent = currentQuestion.answers[i];
-                answerElement.addEventListener('click', () => handleAnswerClick(i));
+                answerElement.addEventListener('click', () => handleAnswerClick(i, answerElement));
                 answerElements.appendChild(answerElement);
             }
 
@@ -103,18 +103,46 @@ fetch("/static/tests_jsons/dates_test.json")
         }
 
         // Функция для обработки клика на ответ
-        function handleAnswerClick(selectedIndex) {
+        function handleAnswerClick(selectedIndex, selectedElement) {
             const currentQuestion = questions[QuestionNow];
+            const answerElements = document.querySelectorAll('.answer-option');
+            const correctElement = answerElements[currentQuestion.correctAnswer];
+
             if (selectedIndex === currentQuestion.correctAnswer) {
+                selectedElement.style.backgroundColor = '#558934';
                 correctAnswers++;
+                // Подождем немного, чтобы пользователь видел результат
+                setTimeout(() => {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < countOfQuestions) {
+                        displayCurrentQuestion();
+                    } else {
+                        showFinalResults();
+                    }
+                }, 1000);
+            } else {
+                selectedElement.style.backgroundColor = '#D73121';
+                correctElement.style.backgroundColor = '#558934';
+                showNextButton();
             }
 
-            currentQuestionIndex++;
-            if (currentQuestionIndex < countOfQuestions) {
-                displayCurrentQuestion();
-            } else {
-                showFinalResults();
-            }
+        }
+        // Кнопка далее
+        function showNextButton() {
+            const questionContainer = document.getElementById('question-container');
+            const nextButton = document.createElement('button');
+            nextButton.id = 'next-button';
+            nextButton.textContent = 'Продолжить';
+            nextButton.classList.add("nextButton");
+            nextButton.addEventListener('click', () => {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < countOfQuestions) {
+                    displayCurrentQuestion();
+                } else {
+                    showFinalResults();
+                }
+            });
+            questionContainer.appendChild(nextButton);
         }
 
         // отображения финальных результатов
@@ -126,11 +154,6 @@ fetch("/static/tests_jsons/dates_test.json")
             resultsElement.classList.add('results');
             resultsElement.textContent = `Ваш результат: ${correctAnswers} / ${countOfQuestions}`;
             questionContainer.appendChild(resultsElement);
-
-            // const restartButton = document.createElement('button');
-            // restartButton.id = 'restart-button';
-            // restartButton.textContent = 'Пройти заново';
-            // questionContainer.appendChild(restartButton);
 
             restartButton.addEventListener('click', () => {
                 currentQuestionIndex = 0;
