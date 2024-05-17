@@ -114,6 +114,47 @@ main img {
     left: -40px;
 }
 
+.menuButtonsContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.menuButton {
+    margin-top: 30px;
+    width: 100%;
+    height: 10vh;
+    border-radius: 2.5vh;
+    border-color: #927052;
+    background-color: #C9AD87;
+    border-style: solid;
+    color: #623F26;
+    font-size: larger;
+    font-family: inherit;
+}
+
+.menuButton:hover {
+    background-color: #927052;
+    border: solid 3px #C9AD87;
+    color: #ded5c7;
+    cursor: pointer;
+}
+
+.menuButton a {
+    text-decoration: none;
+    color: #623F26;
+    font-size: larger;
+    font-family: inherit;
+}
+.menuButton:hover a {
+    text-decoration: none;
+    color: #ded5c7;
+}
+
+
 .ad {
     width: 20%;
     height: 100%;
