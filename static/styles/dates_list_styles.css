@@ -7,6 +7,7 @@
 
     width: 50%;
     height: auto;
+    min-height: 100vh;
     background-color: #eed8b0;
 }
 

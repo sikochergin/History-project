@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #F2ECE1;
 }
@@ -179,109 +183,63 @@ main img {
 }
 
 /* Mobile-specific styles */
-@media (max-width: 767px) {
-
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        -ms-touch-action: manipulation;
-        touch-action: manipulation;
+@media (max-width: 768px) {
+    /* Главная страница с кнопками на переходы */
+    .menuButtonsContainer {
+        margin-top: 5vh;
+        width: 70vw;
+        z-index: 5;
     }
 
-    main {
-        flex-grow: 1;
+    .kutuzov {
+        width: 80vw;
+        right: -15vw;
+        bottom: -10px;
     }
 
-    footer {
-        margin-top: auto;
+    .petr {
+        height: 40vh;
+        bottom: 0;
+        left: -20vw;
     }
 
-    header {
+    .ship {
+        width: 60vw;
+        z-index: 1;
+        right: -10vw;
+        bottom: 35vh;
+    }   
+
+    .cannon {
+        width: 40vw;
         height: auto;
-        padding: 10px;
+        left: -5vw;
+        top: 25vh;
     }
-
-    .headerLogo {
-        width: 100%;
-        font-size: 30px;
-        justify-content: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    main {
-        flex-direction: column;
-        height: auto;
-    }
-
+    /* Страница со всеми датами */
+    /* Страница с марафоном */
     .ad {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-left: 0;
+        display: none;
     }
-
     .testBlock {
-        width: 100%;
-        height: auto;
-        border-radius: 0;
-        margin-top: 20px;
-        padding-top: 20px;
+        width: 80% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .test-container {
+        width: 90% !important;
+    }
+    /* Тест на время */
+    #description-container p {
+        font-size: 20px;
     }
 
     .text {
-        font-size: 24px;
-        margin-top: 10px;
-        margin-bottom: 30px;
-    }
-
-    #answer {
-        width: 80%;
-        margin-top: 40px;
-    }
-
-    .question {
-        font-size: 16px;
-        margin-bottom: 40px;
+        font-size: 28px !important;
     }
 
     .answer-options {
-        grid-template-columns: 1fr;
-        grid-row-gap: 10px;
-    }
-
-    .answer-option {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .numberQuestionContainer {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 20px;
-    }
-
-    .qnumber {
-        height: 25px;
-        width: 25px;
-        font-size: medium;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .progressBarOuter {
-        width: 60%;
+        grid-template-columns: repeat(1, auto) !important;
+        grid-row-gap: 10px !important;
     }
 }
