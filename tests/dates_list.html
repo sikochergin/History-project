@@ -12,6 +12,7 @@
     <!-- Yandex.RTB -->
     <script>window.yaContextCb = window.yaContextCb || []</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <script src="/static/scripts/burder_menu.js"></script>
 </head>
 
 <body>
@@ -20,11 +21,25 @@
             <a href="/index.html">History</a>
         </div>
         <nav>
-            <ul>
+            <ul class="header-pages-links">
                 <li class="active"><a>Важные даты</a></li>
                 <li><a href="/tests/dates_test.html">Марафон по датам</a></li>
                 <li><a href="/tests/dates_test_time.html">Тест по датам</a></li>
             </ul>
+            <!-- Бургер меню -->
+            <div class="burger-menu-icon" id="burgerMenuIcon">
+                ☰
+            </div>
+            <div class="sidebar" id="sidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/tests/dates_list.html">Все даты</a></li>
+                    <li><a href="/tests/dates_test.html">Марафон по датам</a></li>
+                    <li><a href="/tests/dates_test_time.html">Тест на время</a></li>
+                </ul>
+            </div>
+            <!--  -->
         </nav>
     </header>
 

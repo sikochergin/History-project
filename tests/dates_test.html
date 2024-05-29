@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/styles/style.css">
     <link rel="stylesheet" href="/static/styles/dates_test_styles.css">
     <link rel="icon" href="/static/images/Book_icon.ico">
+    <script src="/static/scripts/burder_menu.js"></script>
 </head>
 
 <body>
@@ -17,11 +18,25 @@
             <a href="/index.html">History</a>
         </div>
         <nav>
-            <ul>
+            <ul class="header-pages-links">
                 <li><a href="/tests/dates_list.html">Важные даты</a></li>
                 <li class="active"><a>Марафон по датам</a></li>
                 <li><a href="/tests/dates_test_time.html">Тест на время</a></li>
             </ul>
+            <!-- Бургер меню -->
+            <div class="burger-menu-icon" id="burgerMenuIcon">
+                ☰
+            </div>
+            <div class="sidebar" id="sidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/tests/dates_list.html">Все даты</a></li>
+                    <li><a href="/tests/dates_test.html">Марафон по датам</a></li>
+                    <li><a href="/tests/dates_test_time.html">Тест на время</a></li>
+                </ul>
+            </div>
+            <!--  -->
         </nav>
     </header>
 
