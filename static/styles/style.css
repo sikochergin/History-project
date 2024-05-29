@@ -4,7 +4,7 @@
 }
 
 body, html {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
@@ -240,6 +240,7 @@ main img {
         width: 80% !important;
         margin-left: auto;
         margin-right: auto;
+        height: fit-content;
     }
 
     .test-container {
@@ -247,6 +248,9 @@ main img {
     }
 
     /* Тест на время */
+    #restart-button {
+        width: 50vw !important;
+    }
     #description-container p {
         font-size: 20px;
     }
