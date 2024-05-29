@@ -3,9 +3,12 @@
     padding: 0;
 }
 
-html,
-body {
-    overflow-x: hidden;
+body, html {
+    overflow: hidden;
+}
+
+main {
+    position: relative;
 }
 
 body {
@@ -183,6 +186,13 @@ main img {
     justify-content: center;
     align-items: center;
 }
+/* скрыть Бургер меню для больших экранов */
+.burger-menu-icon {
+    display: none;
+}
+.sidebar {
+    display: none;
+}
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
@@ -197,12 +207,12 @@ main img {
     .kutuzov {
         width: 80vw;
         right: -15vw;
-        bottom: -10px;
+        bottom: 7vh;
     }
 
     .petr {
         height: 40vh;
-        bottom: 0;
+        bottom: 8vh;
         left: -20vw;
     }
 
@@ -210,14 +220,14 @@ main img {
         width: 60vw;
         z-index: 1;
         right: -10vw;
-        bottom: 35vh;
+        bottom: 45vh;
     }
 
     .cannon {
         width: 40vw;
         height: auto;
         left: -5vw;
-        top: 25vh;
+        top: 15vh;
     }
 
     /* Страница со всеми датами */
@@ -261,9 +271,10 @@ main img {
 
     /* Бургер меню */
     .burger-menu-icon {
+        display: block;
         font-size: 30px;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         top: 20px;
         right: 20px;
         z-index: 10;
