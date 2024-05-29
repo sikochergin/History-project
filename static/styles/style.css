@@ -240,11 +240,16 @@ main img {
         width: 80% !important;
         margin-left: auto;
         margin-right: auto;
-        height: fit-content;
+        height: fit-content !important;
+        padding-bottom: 50px;
     }
 
     .test-container {
         width: 90% !important;
+        min-height: fit-content;
+    }
+    #question-container {
+        min-height: fit-content;
     }
 
     /* Тест на время */
