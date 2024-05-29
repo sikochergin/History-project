@@ -202,11 +202,11 @@ main img {
 
     /* Отключение рекламы */
     #yandex_rtb_R-A-8609623-2 {
-        display: none !important;
+        width: 10vw !important;
     }
 
     #yandex_rtb_R-A-8609623-1 {
-        display: none !important;
+        width: 10vw !important;
     }
 
     /* Главная страница с кнопками на переходы */
