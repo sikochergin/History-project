@@ -203,10 +203,12 @@ main img {
     /* Отключение рекламы */
     #yandex_rtb_R-A-8609623-2 {
         width: 10vw !important;
+        overflow-x: hidden;
     }
 
     #yandex_rtb_R-A-8609623-1 {
         width: 10vw !important;
+        overflow-x: hidden;
     }
 
     /* Главная страница с кнопками на переходы */
