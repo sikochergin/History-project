@@ -1,6 +1,6 @@
 // Загрузка вопросов и ответов из JSON-файла
 let countOfQuestions = 1; // сколько вопросов отображается
-fetch("/static/tests_jsons/dates_test.json")
+fetch("../tests_jsons/dates_test.json")
     .then(response => response.json())
     .then(data => {
         const questions = data.questions;

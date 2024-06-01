@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const questionsURL = "/static/tests_jsons/dates_test.json";
+    const questionsURL = "../tests_jsons/dates_test.json";
     const totalTimeInMinutes = 20;
     const totalQuestions = 20;
 
@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function endTest() {
+        sendData(1, 2, 3);
         clearInterval(countdown);
         document.getElementById('question-container').style.display = 'none';
         showFinalResults();
@@ -157,3 +158,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// запрос на сервер
+function sendData(var1, var2, var3) {
+    const data = {
+        var1: "1",
+        var2: "2",
+        var3: "3"
+    };
+
+    fetch('/upload', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+}
