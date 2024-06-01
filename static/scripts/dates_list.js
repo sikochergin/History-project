@@ -1,4 +1,4 @@
-fetch('/static/tests_jsons/dates_list.json')
+fetch('../tests_jsons/dates_list.json')
     .then(response => response.json())
     .then(data => {
         const accordionContainer = document.getElementById('dates_list');

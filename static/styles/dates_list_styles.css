@@ -1,39 +1,56 @@
 #dates_list {
-    margin-left: auto;
-    margin-right: auto;
 
+    align-self: center;
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 50px;
 
-    width: 70%;
+    width: 50%;
+    height: auto;
+    min-height: 100vh;
     background-color: #eed8b0;
 }
+
 /* Скрыть содержимое контента по умолчанию */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.5s ease-out;
     padding-left: 20px;
     margin-bottom: 20px;
-  }
-  
-  /* Определение стилей заголовка и текста */
-  .accordion-date {
+}
+
+/* Определение стилей заголовка и текста */
+.accordion-date {
     border-top: solid 1px #e7bd6f;
     padding: 10px;
     cursor: pointer;
     justify-content: center;
-  }
-  
-  /* При наведении меняем цвет фона заголовка */
-  .accordion-date:hover {
+}
+
+/* При наведении меняем цвет фона заголовка */
+.accordion-date:hover {
     background-color: #e7bd6f;
-  }
-  
-  /* Стили для открытого элемента аккордеона */
-  .accordion-item.open .accordion-content {
-    max-height: 200px; /* Максимальная высота, которую может занимать аккордеон */
+}
+
+/* Стили для открытого элемента аккордеона */
+.accordion-item.open .accordion-content {
+    max-height: 200px;
+    /* Максимальная высота, которую может занимать аккордеон */
     transition: max-height 0.5s ease-in;
-  }
-  
+}
+
+main {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#yandex_rtb_R-A-8609623-1 {
+    width: 20%;
+    height: auto;
+}
+#yandex_rtb_R-A-8609623-2 {
+    width: 20%;
+    height: auto;
+}

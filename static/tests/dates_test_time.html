@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Тест на время</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/dates_test_styles.css">
+    <link rel="stylesheet" href="../styles/dates_test_time_styles.css">
+    <link rel="icon" href="../images/Book_icon.ico">
+    <script src="../scripts/burder_menu.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerLogo">
+            <a href="../index.html">History</a>
+        </div>
+        <nav>
+            <ul class="header-pages-links">
+                <li><a href="dates_list.html">Важные даты</a></li>
+                <li><a href="dates_test.html">Марафон по датам</a></li>
+                <li class="active"><a href="dates_test_time.html">Тест на время</a></li>
+            </ul>
+            <!-- Бургер меню -->
+            <div class="burger-menu-icon" id="burgerMenuIcon">
+                ☰
+            </div>
+            <div class="sidebar" id="sidebar">
+                <div class="close-btn" id="closeBtn">&times;</div>
+                <ul>
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/tests/dates_list.html">Все даты</a></li>
+                    <li><a href="/tests/dates_test.html">Марафон по датам</a></li>
+                    <li><a href="/tests/dates_test_time.html">Тест на время</a></li>
+                </ul>
+            </div>
+            <!--  -->
+        </nav>
+    </header>
+    <main id="main">
+        <img src="../images/Cannon.png" alt="Cannon" class="cannon">
+        <img src="../images/Kutuzov.png" alt="Kutuzov" class="kutuzov">
+        <img src="../images/Petr_1.png" alt="Petr" class="petr">
+        <img src="../images/Ship.png" alt="Ship" class="ship">
+
+        <div class="testBlock">
+            <div id="description-container">
+                <p>Эта тестовая работа состоит из 20 вопросов. У вас есть 20 минут на её выполнение.</p>
+                <button id="start-button">Начать тест</button>
+            </div>
+            <div class="timer" id="timer-container">20:00</div>
+            <div id="question-container" class="question-container"></div>
+            <div id="results-container" style="display: none;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Тест по истории</p>
+    </footer>
+    <script src="../scripts/dates_test_time.js"></script>
+    <script>
+        document.ondragstart = noselect;
+        document.onselectstart = noselect;
+        function noselect() { return false; }
+    </script>
+</body>
+
+</html>
